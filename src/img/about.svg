@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" fill="none">
+    <!-- Globe Circle -->
+    <circle cx="250" cy="250" r="200" stroke="#0A192F" stroke-width="10" fill="none"/>
+    
+    <!-- Longitude Lines -->
+    <ellipse cx="250" cy="250" rx="180" ry="200" stroke="#0A192F" stroke-width="6" fill="none"/>
+    <ellipse cx="250" cy="250" rx="100" ry="200" stroke="#0A192F" stroke-width="6" fill="none"/>
+    
+    <!-- Latitude Lines -->
+    <line x1="50" y1="250" x2="450" y2="250" stroke="#0A192F" stroke-width="6"/>
+    <line x1="70" y1="150" x2="430" y2="150" stroke="#0A192F" stroke-width="4"/>
+    <line x1="90" y1="350" x2="410" y2="350" stroke="#0A192F" stroke-width="4"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg width="150" height="120" viewBox="0 0 150 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- "A" harfi -->
+  <path d="M30,90 L60,20 L90,90 L75,90 L60,50 L45,90 Z" fill="#0B3D91"/>
+
+  <!-- "B" harfi (soddalashtirilgan va dizayni o‘zgargan) -->
+  <path d="M80,20 L105,20 Q120,20 120,40 Q120,60 105,60 L80,60 Z" fill="none" stroke="#0B3D91" stroke-width="10"/>
+  <path d="M80,60 L105,60 Q120,60 120,80 Q120,100 105,100 L80,100 Z" fill="none" stroke="#0B3D91" stroke-width="10"/>
+</svg>
