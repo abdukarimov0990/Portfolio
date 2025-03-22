@@ -15,9 +15,9 @@ const Header = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   };
-  const [darkMode, setDarkMode] = useState(
-    localStorage.getItem("theme") === "dark"
-  );
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem("theme") === "dark";
+  });
 
   useEffect(() => {
     if (darkMode) {
