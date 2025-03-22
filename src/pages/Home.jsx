@@ -60,6 +60,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* about  */}
       <section id="about" className="py-16">
         <h1 className="font-oswald mb-15 text-5xl font-bold text-center text-white dark:text-main">ABOUT ME:</h1>
         <div className="container text-center lg:text-start font-work text-white dark:text-main flex justify-between">
@@ -99,6 +100,7 @@ const Home = () => {
           </svg>
         </div>
       </section>
+      {/* Skills  */}
       <section className="py-16">
         <h1 className="text-center text-5xl font-bold uppercase text-white dark:text-main font-oswald mb-10">My skills:</h1>
         <div className="container">
@@ -118,6 +120,7 @@ const Home = () => {
           </ul>
         </div>
       </section>
+      {/* Portifilio  */}
       <section id="projects" className="py-16 text-center text-white dark:text-main">
         <h2 className="text-5xl uppercase font-bold text-white dark:text-main font-oswald mb-10">My Projects:</h2>
         <div className="grid grid-cols-1 container sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6 font-work">
@@ -138,6 +141,7 @@ const Home = () => {
           ))}
         </div>
       </section>
+      {/* Contact  */}
       <section id="contact" className="py-16 text-white dark:text-main">
         <div className="w-full max-w-[1420px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center bg-main dark:bg-white border font-work border-gray-400 rounded-2xl p-10">
           <div className="">
