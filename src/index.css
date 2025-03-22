@@ -7,6 +7,7 @@
   --font-work:"Work Sans", "sans-serif";
   --font-oswald:"Oswald", "sans-serif";
 }
+@custom-variant dark (&:where(.dark, .dark *));
 
 .container{
   @apply w-full max-w-[1420px] mx-auto px-5
