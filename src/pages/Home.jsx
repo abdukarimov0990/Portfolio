@@ -118,7 +118,7 @@ const Home = () => {
                 return (
                   <li  className="p-7  dark:bg-white border rounded-2xl  border-gray-400 transition-all ease-in-out duration-300 hover:scale-110">
                     <div className="flex justify-center">
-                      <img src={skill.img} alt="skill_img" className="w-32 mb-4" />
+                      <img src={skill.img} alt={skill.name} className="w-32 mb-4" />
                     </div>
                     <h3 className="text-3xl font-bold font-work text-white dark:text-main text-center">{skill.name}</h3>
                   </li>
