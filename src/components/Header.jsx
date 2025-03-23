@@ -7,7 +7,7 @@ import { Github, Menu, Moon, X } from 'lucide-react';
 const Header = () => {
   // menu 
   const [isOpen, setIsOpen] = useState(false);
-  // add a smoothly scroll to and element with a given ID 
+  // add a smoothly scroll to an element with a given ID 
   const handleScroll = (e, id) => {
     e.preventDefault();
     const element = document.getElementById(id);
