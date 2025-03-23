@@ -1,6 +1,8 @@
 import React from 'react'
+// import Routers 
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router'
 import MainLayout from './layouts/MainLayout'
+// import pages 
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
 

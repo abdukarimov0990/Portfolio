@@ -1,15 +1,18 @@
 import { Link } from "react-router"
+// import data 
 import { projects, skills } from "../data/data"
+// import icons 
 import { Facebook, Github, Globe, Instagram, Twitter } from "lucide-react"
-import { motion } from 'framer-motion';
 import { BsTelegram } from "react-icons/bs";
+// import animations 
+import { motion } from 'framer-motion';
+// hooks 
 import { useState } from "react";
+// axios 
 import axios from "axios";
 
-
-
-
 const Home = () => {
+  // connect with telegramBot
   const [forlgata, setForlgata] = useState({ name: "", contact: "", message: "" });
   const chatId = "6276000412"; // Telegram chat ID
   const telegramBotId = "7838971341:AAE6kW-r2amzCGS4Mukh43InQoSa77y3z0I"; // Telegram bot token
@@ -25,7 +28,6 @@ const Home = () => {
   const handleChange = (e) => {
     setForlgata({ ...forlgata, [e.target.name]: e.target.value });
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -146,10 +148,10 @@ const Home = () => {
         <div className="w-full max-w-[1420px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center bg-main dark:bg-white border font-work border-gray-400 rounded-2xl p-10">
           <div className="">
             <div className="mb-7">
+              {/* Social media accounts  */}
               <h1 className="text-5xl font-oswald  font-bold  mb-4">Contact</h1>
               <p className="">"Want to know more about me or just chat? Whatever it is, I’ll always be here to respond and keep the conversation going!"</p>
             </div>
-
             <h2 className="text-3xl font-oswald font-bold uppercase  mb-5">My social media accounts:</h2>
             <div className="grid-cols-2 grid gap-5">
               <a href="https://www.instagram.com/abdukarimov_606/?next=%2F" className="p-5 group bg-main dark:bg-white rounded-2xl border transition-all border-gray-400 ease-in-out duration-300 hover:dark:bg-main hover:bg-white hover:scale-110">
@@ -178,6 +180,7 @@ const Home = () => {
               </a>
             </div>
           </div>
+          {/* contact form  */}
           <div className="w-full p-8 bg-main dark:bg-second border border-gray-400 h-full rounded-2xl font-work">
             <h2 className="font-oswald text-4xl mb-10  font-bold">You can send a message here.</h2>
             <form onSubmit={handleSubmit} className="flex flex-col gap-5">

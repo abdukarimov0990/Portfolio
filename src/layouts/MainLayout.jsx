@@ -1,5 +1,7 @@
 import React from 'react'
+// import hooks 
 import { Outlet, useLocation } from 'react-router'
+// import components 
 import Header from '../components/Header'
 
 const MainLayout = () => {

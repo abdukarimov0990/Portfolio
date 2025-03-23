@@ -1,9 +1,13 @@
+// import hooks 
 import React, { use, useEffect, useRef, useState } from 'react'
 import { Link, NavLink } from 'react-router'
+// import icons 
 import { Github, Menu, Moon, X } from 'lucide-react';
 
 const Header = () => {
+  // menu 
   const [isOpen, setIsOpen] = useState(false);
+  // add a smoothly scroll to and element with a given ID 
   const handleScroll = (e, id) => {
     e.preventDefault();
     const element = document.getElementById(id);
@@ -18,6 +22,7 @@ const Header = () => {
   const [darkMode, setDarkMode] = useState(() => {
     return localStorage.getItem("theme") === "dark";
   });
+  // dark mode 
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
@@ -30,8 +35,10 @@ const Header = () => {
 
   return (
     <header ref={ref} className='z-10  p-5 fixed w-full dark:bg-second dark:text-main bg-main text-white'>
+      {/* Header */}
       <div className="container flex justify-between items-center">
         <Link to='/' className='dark:text-main text-white font-bebas text-4xl lg:text-6xl font-bold'>Abdukarimov</Link>
+        {/* Navbar  */}
         <nav>
           <ul className='lg:flex hidden gap-5 font-work text-xl'>
             <li><NavLink to="/" onClick={scrollToTop} className="ease-in-out duration-300 hover:font-bold">Home</NavLink></li>
@@ -43,6 +50,7 @@ const Header = () => {
         <div className="flex gap-10">
           <a href="https://github.com/abdukarimov0990" className='hidden lg:inline-block'><Github size="35" className=" dark:text-main text-white transition-all duration-300"
           /></a>
+          {/* dark mode button  */}
           <button className='hidden lg:inline-block'>  <Moon
             size="35"
             className="cursor-pointer dark:text-main text-white dark:fill-none fill-white transition-all duration-300"
@@ -54,6 +62,7 @@ const Header = () => {
           <Menu size={35}></Menu>
         </button>
       </div>
+      {/* Menu  */}
       {isOpen && (
         <div className="fixed inset-0 bg-black/40 bg-opacity-50 z-40" onClick={() => setIsOpen(false)}></div>
       )}
@@ -73,8 +82,8 @@ const Header = () => {
             <li><a href="#about" onClick={(e) => { handleScroll(e, "about"); setIsOpen(false); }} className="ease-in-out duration-300 hover:font-bold">About</a></li>
             <li><a href="#projects" onClick={(e) => { handleScroll(e, "projects"); setIsOpen(false) }} className="ease-in-out duration-300 hover:font-bold">Portfolio</a></li>
             <li><a href="#contact" onClick={(e) => { handleScroll(e, "contact"); setIsOpen(false) }} className="ease-in-out duration-300 hover:font-bold">Contact</a></li>
-
           </ul>
+          {/* dark mode button  */}
           <div className="py-4 border-t flex justify-between items-center">
             <span className='font-work text-xl'>Dark Mode</span>
             <button onClick={() => setDarkMode(!darkMode)}>

@@ -1,3 +1,4 @@
+// import images 
 import milliard from "../public/img/milliard.png";
 import store from '../public/img/store.png';
 import countries from '../public/img/countries.png';
@@ -10,6 +11,7 @@ import js from '../public/img/js.png';
 import react from '../public/img/react.png';
 import tailwind from '../public/img/tailwind.png'
 import bootstrap from '../public/img/bootstrap.png'
+// projects list 
 export const projects = [
     {
       title: "Milliard uz",
@@ -54,6 +56,7 @@ export const projects = [
       githubLink: "https://github.com/abdukarimov0990/JS-My-Simple-Calculator-main",
     },
   ];
+  // skills list 
 export const skills = [
   {
     name: "HTML",

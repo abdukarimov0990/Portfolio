@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 
 export default function NotFound() {
+  // 404 not found page 
     return (
       <div className="flex flex-col items-center justify-center h-screen bg-gray-100 text-gray-900">
         <h1 className="font-oswald text-[300px] tracking-widest text-main font-bold">404</h1>

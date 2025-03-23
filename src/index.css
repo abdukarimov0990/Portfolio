@@ -1,24 +1,29 @@
 @import "tailwindcss";
 
 @theme{
+  /* colors  */
   --color-main: #001F3F	;
   --color-second:#F8F9FA;
+  /* font  */
   --font-bebas:"Bebas Neue", "sans-serif";
   --font-work:"Work Sans", "sans-serif";
   --font-oswald:"Oswald", "sans-serif";
 }
 @custom-variant dark (&:where(.dark, .dark *));
-
+/* container  */
 .container{
   @apply w-full max-w-[1420px] mx-auto px-5
 }
+/* when page is active  */
 ul a.active{
   @apply font-bold
 }
+/* customize selection  */
 ::selection {
   background-color:#001F3F;
   color: white;
 }
+/* customize scrollbar  */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
