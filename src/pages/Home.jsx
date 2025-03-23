@@ -7,9 +7,12 @@ import { BsTelegram } from "react-icons/bs";
 // import animations 
 import { motion } from 'framer-motion';
 // hooks 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // axios 
 import axios from "axios";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 const Home = () => {
   // connect with telegramBot
@@ -41,12 +44,15 @@ const Home = () => {
       alert("Something went wrong!");
     }
   };
-
+    useEffect(() => {
+      AOS.init({ duration: 1500 });
+    }, []);
+  
   return (
     <div className="dark:bg-second bg-main">
       {/* Hero */}
       <section id="home" className=" font-oswald uppercase text-white dark:text-gray-900 h-[80vh] flex flex-col items-center justify-center">
-        <div className="text-center ">
+        <div data-aos="fade-up" className="text-center ">
           <h1 className="text-5xl lg:text-7xl font-bold tracking-tight">
             Hello i am  <br />  <span className="dark:text-main text-white">Abdukarimov Oyatbek</span>
           </h1>
@@ -64,9 +70,9 @@ const Home = () => {
       </section>
       {/* about  */}
       <section id="about" className="py-16">
-        <h1 className="font-oswald mb-15 text-5xl font-bold text-center text-white dark:text-main">ABOUT ME:</h1>
-        <div className="container text-center lg:text-start font-work text-white dark:text-main flex justify-between">
-          <div className="w-full max-w-full lg:max-w-2xl">
+        <h1 data-aos="fade-up"  className="font-oswald mb-15 text-5xl font-bold text-center text-white dark:text-main">ABOUT ME:</h1>
+        <div data-aos="fade-up"   className="container text-center lg:text-start font-work text-white dark:text-main flex justify-between">
+          <div data-aos="fade-up"  className="w-full max-w-full lg:max-w-2xl">
             <h1 className="text-3xl font-bold mb-4">I AM ABDUKARIMOV OYATBEK SON OF MUZAFFAR</h1>
             <p className="text-lg mb-2">🇺🇿 REPUBLIC OF UZBEKISTAN, ANDIJAN REGION</p>
             <h2 className="text-2xl font-semibold mb-3">I AM A FRONTEND DEVELOPER!</h2>
@@ -103,14 +109,14 @@ const Home = () => {
         </div>
       </section>
       {/* Skills  */}
-      <section className="py-16">
-        <h1 className="text-center text-5xl font-bold uppercase text-white dark:text-main font-oswald mb-10">My skills:</h1>
+      <section className="py-16" data-aos="fade-up" >
+        <h1 data-aos="fade-up"  className="text-center text-5xl font-bold uppercase text-white dark:text-main font-oswald mb-10">My skills:</h1>
         <div className="container">
-          <ul className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 gap-y-7">
+          <ul data-aos="fade-up"  className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 gap-y-7">
             {
               skills.map(function (skill) {
                 return (
-                  <li className="p-7  dark:bg-white border rounded-2xl  border-gray-400 transition-all ease-in-out duration-300 hover:scale-110">
+                  <li  className="p-7  dark:bg-white border rounded-2xl  border-gray-400 transition-all ease-in-out duration-300 hover:scale-110">
                     <div className="flex justify-center">
                       <img src={skill.img} alt="skill_img" className="w-32 mb-4" />
                     </div>
@@ -123,9 +129,9 @@ const Home = () => {
         </div>
       </section>
       {/* Portifilio  */}
-      <section id="projects" className="py-16 text-center text-white dark:text-main">
-        <h2 className="text-5xl uppercase font-bold text-white dark:text-main font-oswald mb-10">My Projects:</h2>
-        <div className="grid grid-cols-1 container sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6 font-work">
+      <section id="projects" data-aos="fade-up" className="py-16 text-center text-white dark:text-main">
+        <h2 data-aos="fade-up"  className="text-5xl uppercase font-bold text-white dark:text-main font-oswald mb-10">My Projects:</h2>
+        <div data-aos="fade-up"  className="grid grid-cols-1 container sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6 font-work">
           {projects.map((project, index) => (
             <div key={index} className="dark:bg-white border border-gray-600 p-4 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
               <img src={project.image} alt={project.title} className="rounded-lg w-full h-48 object-cover" />
@@ -145,8 +151,8 @@ const Home = () => {
       </section>
       {/* Contact  */}
       <section id="contact" className="py-16 text-white dark:text-main">
-        <div className="w-full max-w-[1420px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center bg-main dark:bg-white border font-work border-gray-400 rounded-2xl p-10">
-          <div className="">
+        <div data-aos="fade-up"  className="w-full max-w-[1420px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center bg-main dark:bg-white border font-work border-gray-400 rounded-2xl p-10">
+          <div data-aos="fade-up"  className="">
             <div className="mb-7">
               {/* Social media accounts  */}
               <h1 className="text-5xl font-oswald  font-bold  mb-4">Contact</h1>
@@ -181,7 +187,7 @@ const Home = () => {
             </div>
           </div>
           {/* contact form  */}
-          <div className="w-full p-8 bg-main dark:bg-second border border-gray-400 h-full rounded-2xl font-work">
+          <div data-aos="fade-up" className="w-full p-8 bg-main dark:bg-second border border-gray-400 h-full rounded-2xl font-work">
             <h2 className="font-oswald text-4xl mb-10  font-bold">You can send a message here.</h2>
             <form onSubmit={handleSubmit} className="flex flex-col gap-5">
               <label>
