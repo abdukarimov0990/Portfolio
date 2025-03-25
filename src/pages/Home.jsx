@@ -12,6 +12,11 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+
 
 
 const Home = () => {
@@ -73,24 +78,32 @@ const Home = () => {
         <h1 data-aos="fade-up" className="font-oswald mb-15 text-5xl font-bold text-center text-white dark:text-main">ABOUT ME:</h1>
         <div data-aos="fade-up" className="container text-center lg:text-start font-work text-white dark:text-main flex justify-between">
           <div data-aos="fade-up" className="w-full max-w-full lg:max-w-2xl">
-            <h1 className="text-3xl font-bold mb-4">I AM ABDUKARIMOV OYATBEK SON OF MUZAFFAR</h1>
-            <p className="text-lg mb-2">🇺🇿 REPUBLIC OF UZBEKISTAN, ANDIJAN REGION</p>
-            <h2 className="text-2xl font-semibold mb-3">I AM A FRONTEND DEVELOPER!</h2>
+            <h1 className="text-3xl font-bold mb-4">I AM ABDUKARIMOV OYATBEK</h1>
+            <p className="text-lg mb-2">🇺🇿 Andijan, Uzbekistan</p>
+
+            <h2 className="text-2xl font-semibold mb-3">FRONTEND DEVELOPER</h2>
 
             <p className="text-lg mb-4">
-              I am interested in working with modern web technologies and strive for constant growth. Due to my interest in programming, I have studied technologies such as <strong>HTML, CSS, JavaScript, React, Bootstrap, Tailwind</strong> in depth and know how to use them effectively.
+              Passionate about modern web technologies, I have studied
+              <strong> HTML, CSS, JavaScript, React, Bootstrap, Tailwind</strong>
+              and know how to use them effectively.
             </p>
 
             <p className="text-lg mb-4">
-              I am a person with a creative approach, able to solve problems and open to learning. I do not have experience yet, but I have the skills to work independently and work with a team.
+              I am a creative problem solver, eager to learn and grow.
+              While I lack professional experience, I can work independently and in a team.
             </p>
 
             <p className="text-lg mb-4">
-              My goal is to create high-quality, modern and functional web applications. I try to work on myself every day, gain new knowledge and experience. Given the rapid development of technologies, I am always ready to master new knowledge.
+              My goal is to build high-quality, functional web applications and continuously
+              expand my knowledge in the ever-evolving tech industry.
             </p>
 
-            <h2 className="text-2xl font-semibold mt-4">I WANT TO BECOME A STRONG PROGRAMMER IN THE FUTURE AND IMPLEMENT GREAT PROJECTS!</h2>
+            <h2 className="text-2xl font-semibold mt-4">
+              I ASPIRE TO BECOME A STRONG PROGRAMMER AND BUILD GREAT PROJECTS!
+            </h2>
           </div>
+
           <svg
             width="500"
             height="500"
@@ -111,8 +124,39 @@ const Home = () => {
       {/* Skills  */}
       <section className="py-16" data-aos="fade-up" >
         <h1 data-aos="fade-up" className="text-center text-5xl font-bold uppercase text-white dark:text-main font-oswald mb-10">My skills:</h1>
+
         <div className="container">
-          <ul data-aos="fade-up" className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 gap-y-7">
+          <div className="flex lg:hidden">
+            <Swiper
+              modules={[Pagination, Autoplay]}
+              spaceBetween={20}
+              slidesPerView={1}
+              loop={true}
+              autoplay={{ delay: 2500, disableOnInteraction: false }}
+              pagination={{ clickable: true }}
+              className="w-full flex "
+            >
+              {skills.map(function (skill) {
+                return (
+                  <SwiperSlide className="w-full flex justify-center">
+                    <li className="p-6 bg-main text-center dark:bg-white border border-gray-400 rounded-2xl w-full shadow-lg">
+                      <div className="flex justify-center">
+                        <img src={skill.img} alt={skill.name} className="w-24 mb-4" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-white dark:text-main text-center">
+                        {skill.name}
+                      </h3>
+                      <p className="text-center mb-4 text-gray-300 dark:text-gray-700 opacity-80 mt-2">
+                        {skill.decs}
+                      </p>
+                    </li>
+                  </SwiperSlide>
+                )
+              })
+              }
+            </Swiper>
+          </div>
+          <ul data-aos="fade-up" className="hidden lg:grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 gap-y-7">
             {
               skills.map(function (skill) {
                 return (
@@ -121,6 +165,7 @@ const Home = () => {
                       <img src={skill.img} alt={skill.name} className="w-32 mb-4" />
                     </div>
                     <h3 className="text-3xl font-bold font-work text-white dark:text-main text-center">{skill.name}</h3>
+
                   </li>
                 )
               })
@@ -131,7 +176,7 @@ const Home = () => {
       {/* Portifilio  */}
       <section id="projects" className="py-16 text-center text-white dark:text-main">
         <h2 data-aos="fade-up" className="text-5xl uppercase font-bold text-white dark:text-main font-oswald mb-10">My Projects:</h2>
-        <div data-aos="fade-up" className="grid grid-cols-1 container sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6 font-work">
+        <div data-aos="fade-up" className="grid grid-cols-1 container lg:grid-cols-3 gap-6 px-6 font-work">
           {projects.map((project, index) => (
             <div key={index} className="dark:bg-white border border-gray-600 p-4 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
               <img src={project.image} alt={project.title} className="rounded-lg w-full h-48 object-cover" />

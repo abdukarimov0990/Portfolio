@@ -61,25 +61,31 @@ export const skills = [
   {
     name: "HTML",
     img: html,
+    decs:" (HyperText Markup Language): Defines the structure of web pages using elements like headings, paragraphs, and divs."
   },
   {
     name: "CSS",
     img: css,
+    decs:" (Cascading Style Sheets): Styles web pages by controlling layout, colors, fonts, and responsiveness."
   },
   {
     name: "JS",
     img: js,
+    decs:"Adds interactivity and dynamic functionality to web pages, such as animations and form validation."
   },
   {
     name: "REACT",
     img: react,
+    decs:"A JavaScript library for building reusable and efficient user interfaces with a component-based approach."
   },
   {
     name: "TAILWIND",
     img: tailwind,
+    decs:"A utility-first CSS framework that provides pre-designed classes for fast and customizable styling."
   },
   {
     name: "BOOTSTRAP",
     img: bootstrap,
+    decs:"A responsive CSS framework with pre-built components like buttons, grids, and modals for easy UI development."
   },
 ];
