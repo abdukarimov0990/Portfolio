@@ -2,12 +2,12 @@ import { Link } from "react-router"
 // import data 
 import { projects, skills } from "../data/data"
 // import icons 
-import { Facebook, Github, Globe, Instagram, Twitter } from "lucide-react"
+import { BadgeCheck, CheckCircle, Facebook, Github, Globe, Instagram, Twitter, XCircle } from "lucide-react"
 import { BsTelegram } from "react-icons/bs";
 // import animations 
 import { motion } from 'framer-motion';
 // hooks 
-import { useEffect, useState } from "react";
+import { use, useEffect, useRef, useState } from "react";
 // axios 
 import axios from "axios";
 import AOS from "aos";
@@ -16,9 +16,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-
-
-
 const Home = () => {
   // connect with telegramBot
   const [forlgata, setForlgata] = useState({ name: "", contact: "", message: "" });
@@ -43,15 +40,17 @@ const Home = () => {
 
     try {
       await axios.post(url, { chat_id: chatId, text: message });
-      alert("Message sent successfully!");
+      SetOpenPanel(true);
       setForlgata({ name: "", contact: "", message: "" });
     } catch (error) {
-      alert("Something went wrong!");
+      SetOpenWarning(true);
     }
   };
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+  const [openPanel, SetOpenPanel] = useState(false);
+  const [openWarning, SetOpenWarning] = useState(false);
 
   return (
     <div className="dark:bg-second bg-main">
@@ -283,6 +282,33 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {openPanel && <div className="fixed inset-0 bg-black/90 bg-opacity-50 z-40 flex justify-between items-center">
+        <div className="flex flex-col text-second dark:text-main items-center justify-center font-work bg-main dark:bg-second rounded-2xl shadow-lg p-8 w-full max-w-md mx-auto">
+          <CheckCircle size="200" className=" mb-4" />
+          <span className=" text-xl mb-4 font-semibold text-center">
+            Your request is sended.
+            <br />
+            I'll respond your message as soon as possible
+          </span>
+          <Link to="/" onClick={() => SetOpenPanel(false)}><button className="px-5 py-2 text-2xl bg-second font-bebas text-main dark:text-second dark:bg-main rounded-lg hover:opacity-60 transition-all ease-in-out duration-300 cursor-pointer">Back to Home</button></Link>
+        </div>
+      </div>}
+      {openWarning && <div className="fixed inset-0 bg-black/90 bg-opacity-50 z-40 flex justify-between items-center">
+        <div className="flex flex-col text-second dark:text-main items-center justify-center font-work bg-main dark:bg-second rounded-2xl shadow-lg p-8 w-full max-w-md mx-auto">
+          <XCircle size={200} className="text-red-600 mb-4" />
+          <span className="text-xl mb-4 font-semibold text-center">
+            Something went wrong.
+            <br />
+            Please try again later or contact support.
+          </span>
+          <Link to="/" onClick={() => SetOpenWarning(false)}>
+            <button className="px-5 py-2 text-2xl bg-second font-bebas text-main dark:text-second dark:bg-main rounded-lg hover:opacity-60 transition-all ease-in-out duration-300 cursor-pointer">
+              Back to Home
+            </button>
+          </Link>
+        </div>
+      </div>}
+
     </div>
 
   )
