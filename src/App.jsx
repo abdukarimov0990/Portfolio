@@ -5,6 +5,7 @@ import MainLayout from './layouts/MainLayout'
 // import pages 
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
+import { Analytics } from "@vercel/analytics/next"
 
 const App = () => {
   const routes = createBrowserRouter(
