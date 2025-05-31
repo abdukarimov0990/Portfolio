@@ -12,6 +12,7 @@ import react from '../public/img/react.png';
 import tailwind from '../public/img/tailwind.png'
 import bootstrap from '../public/img/bootstrap.png'
 import fibo from '../public/img/fibo.png'
+import ansormed from '../public/img/ansormed.png'
 // projects list 
 export const projects = [
     {
@@ -29,11 +30,11 @@ export const projects = [
       githubLink: "https://github.com/abdukarimov0990/countries-react",
     },
     {
-      title: "Eccomerence",
-      description: "A website page which you can see product and choose it's number",
-      image: store,
-      liveLink: "https://ecommerce-delta-three-85.vercel.app",
-      githubLink: "https://github.com/abdukarimov0990/ecommerce",
+      title: "Ansormed",
+      description: "A website for hospital ",
+      image: ansormed,
+      liveLink: "https://ansormed-phi-nine.vercel.app/",
+      githubLink: "https://github.com/abdukarimov0990/Ansormed",
     },
     {
       title: "Fibo pizza",
