@@ -11,6 +11,7 @@ import js from '../public/img/js.png';
 import react from '../public/img/react.png';
 import tailwind from '../public/img/tailwind.png'
 import bootstrap from '../public/img/bootstrap.png'
+import fibo from '../public/img/fibo.png'
 // projects list 
 export const projects = [
     {
@@ -35,11 +36,11 @@ export const projects = [
       githubLink: "https://github.com/abdukarimov0990/ecommerce",
     },
     {
-      title: "Contact list",
-      description: "A website which you can add or remove contacts you want",
-      image: contactList,
-      liveLink: "https://contact-list-react-omega.vercel.app/",
-      githubLink: "https://github.com/abdukarimov0990/contact_list_react",
+      title: "Fibo pizza",
+      description: "A website about a pizza store",
+      image: fibo ,
+      liveLink: "https://f-ibo-pizza.vercel.app/",
+      githubLink: "https://github.com/abdukarimov0990/FIbo-pizza",
     },
     {
       title: "Fake Store",
