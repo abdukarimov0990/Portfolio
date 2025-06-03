@@ -32,14 +32,14 @@ export const projects = [
     },
     {
       title: "Ansormed",
-      description: "A website for hospital ",
+      description: "A website for hospital which you can select by categories",
       image: ansormed,
       liveLink: "https://ansormed-phi-nine.vercel.app/",
       githubLink: "https://github.com/abdukarimov0990/Ansormed",
     },
     {
       title: "Fibo pizza",
-      description: "A website about a pizza store",
+      description: "A website about a pizza store which you can add and order pizza",
       image: fibo ,
       liveLink: "https://f-ibo-pizza.vercel.app/",
       githubLink: "https://github.com/abdukarimov0990/FIbo-pizza",
