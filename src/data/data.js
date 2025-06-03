@@ -13,6 +13,7 @@ import tailwind from '../public/img/tailwind.png'
 import bootstrap from '../public/img/bootstrap.png'
 import fibo from '../public/img/fibo.png'
 import ansormed from '../public/img/ansormed.png'
+import bola from '../public/img/bola.png'
 // projects list 
 export const projects = [
     {
@@ -51,11 +52,11 @@ export const projects = [
       githubLink: "https://github.com/abdukarimov0990/fakeStore",
     },
     {
-      title: "Calculator",
-      description: "A website which you can do simple math by using visual calculator",
-      image: calculator,
-      liveLink: "https://mycalculator-ochre.vercel.app/",
-      githubLink: "https://github.com/abdukarimov0990/JS-My-Simple-Calculator-main",
+      title: "Bola tv",
+      description: "A website for kids you can watch cartoons music videos in here",
+      image: bola,
+      liveLink: "https://bola-tv-main.vercel.app/",
+      githubLink: "https://github.com/abdukarimov0990/Bola-Tv-main",
     },
   ];
   // skills list 
