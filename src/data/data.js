@@ -18,6 +18,7 @@ import bola from '../public/img/bola.png'
 export const projects = [
     {
       title: "Milliard uz",
+      type: "Frontend",
       description: "A website for bussines owners and who wants to start a new bussines",
       image: milliard,
       liveLink: "https://milliarduz.vercel.app/",
@@ -25,6 +26,7 @@ export const projects = [
     },
     {
       title: "Countries",
+      type: "Frontend",
       description: "A website which you can find information about any country you want",
       image: countries,
       liveLink: "https://countries-react-2z7v.vercel.app/",
@@ -32,6 +34,7 @@ export const projects = [
     },
     {
       title: "Ansormed",
+      type: "Frontend",
       description: "A website for hospital which you can select by categories",
       image: ansormed,
       liveLink: "https://ansormed-phi-nine.vercel.app/",
@@ -39,6 +42,7 @@ export const projects = [
     },
     {
       title: "Fibo pizza",
+      type: "Frontend",
       description: "A website about a pizza store which you can add and order pizza",
       image: fibo ,
       liveLink: "https://f-ibo-pizza.vercel.app/",
@@ -46,6 +50,7 @@ export const projects = [
     },
     {
       title: "Fake Store",
+      type: "Frontend",
       description: "A website which is looks and works lika normal online store",
       image: fakeStore,
       liveLink: "https://fake-store-three-livid.vercel.app/",
@@ -53,11 +58,13 @@ export const projects = [
     },
     {
       title: "Bola tv",
+      type: "Frontend",
       description: "A website for kids you can watch cartoons music videos in here",
       image: bola,
       liveLink: "https://bola-tv-main.vercel.app/",
       githubLink: "https://github.com/abdukarimov0990/Bola-Tv-main",
     },
+    
   ];
   // skills list 
 export const skills = [
